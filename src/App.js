@@ -1,10 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 import Footer from './Footer';
+import Snackbar from './Snackbar';
 
 function App() {
   const [result, setResult] = useState("");
-
+  const [validExpression, setValidExpression] = useState(true);
   const changeHandler = (e) => {
     setResult(result.concat(e.target.name));
   }
@@ -17,8 +18,11 @@ function App() {
     try {
       setResult(eval(result).toString());
     } catch (error) {
-      alert('Invalid expression!!');
+      setValidExpression(false);
       clearHandler();
+      setTimeout(() => {
+        setValidExpression(true);
+      }, 2000);
     }
   }
 
@@ -54,6 +58,7 @@ function App() {
         </div>
       </div>
       <Footer></Footer>
+      <Snackbar validExpression={validExpression} />
     </>
   );
 }
