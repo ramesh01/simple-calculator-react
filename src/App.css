@@ -1,0 +1,62 @@
+* {
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3836394d;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  border: 10px solid;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+  background-color: black;
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 242px;
+  background-color: black;
+  color: #fff;
+  text-align: right;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+#clear {
+  grid-row: 1;
+  grid-column: 1/3;
+}
+
+#result {
+  grid-column: 3/5;
+  grid-row: 5;
+}
+
+button {
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  color: #000;
+}
+
+footer div,
+a {
+  font-size: 12px;
+}
