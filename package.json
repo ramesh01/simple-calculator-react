@@ -1,6 +1,6 @@
 {
   "homepage": "https://ramesh01.github.io/simple-calculator-react",
-  "name": "calculator",
+  "name": "simple-calculator-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
